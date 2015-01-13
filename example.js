@@ -14,7 +14,7 @@ var fuzzerOptions = {
     //     username: 'default',
     //     password: 'letmein'
     // },
-    maxIterations: 100
+    iterations: 10000
 };
 
 server.register([{
@@ -40,9 +40,6 @@ server.register([{
             throw err;
         }
 
-        server.start(function () {
-
-            console.log('Server started', server.info.uri);
-        });
+        process.exit();
     });
 });
